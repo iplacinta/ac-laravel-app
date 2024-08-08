@@ -1,66 +1,61 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Amherst College
+### Reporting and Applications Developer Project
+Thank you for your interest in the Reporting and Applications Developer position. 
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+For the next part of the interview process, you will need to fork this repository and then complete the tasks below.
 
-## About Laravel
+Once finished with your work, invite GitHub user iplacinta to review your PR and leave comments.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Show us what you can do. Be creative, but deliver the requirements.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### Deadline: One week from when you are given this project.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Tasks
+1.	Fork this repository, and create a new branch for your work.
+2.	Modify users table, add Boolean column ‘is_admin’ with a default of false, and string column ‘bio’
+3.	Create seeders that will generate the following users:
+      -	One admin user, with the name “Amherst Admin”,
+      -	Name: Amherst Admin
+      -	Email: admin@mail.com
+      -	Two other admin users
+      -	Five non-admin users
+      -	All seeded users (including admins) should have the password ‘testpass’
+4.	Create a function “specialName” that returns ‘AC ‘ prefixed to the user’s name, append it to the user so that it’s always available.
+5.	Create a resourceful controller UserController and a resourceful route(s) for that controller.
+      -	Cleanup unused items
+      -	Add ‘auth’, ‘verified’ middleware.
+6.	Modify dashboard to show you a list of users.
+      -	Display each user in a card style (make a reusable component)
+      -	The card should include the following
+      -	An image (use https://avatar-placeholder.iran.liara.run/avatars to get an image for each user, you don’t need to store these images, but each use should have it’s own image (unique) and it should remain the same on each page load)
+      -	User’s “Special Name” (see #4)
+      -	Something to indicate whether the user is a regular user, or admin.
+      - User’s bio.
+      - Edit button (takes you to users edit screen).
+      -	Delete button that deletes the user.
+      - Make the cards look good.
+7.	Add ‘Create User’ button to top of dashboard (takes to create user screen)
+8.	User Create Screen
+      -	Name input
+      -	Email input
+      -	Password input
+      -	Bio textarea
+      -	Is Admin checkbox
+      -	Cancel button
+      -	Submit button
+9.	User Edit Screen
+      -	Image (not editable)
+      -	Name input
+      -	Email input
+      -	Bio textarea
+      -	Is Admin checkbox
+      -	Cancel button
+      -	Submit button
+10.	Authorization
+       a.	All users can view the dashboard, but only admins can make changes / create / delete users.
+       b.	Regular users can edit themselves, but cannot make themselves admins, or delete.
+11.	Create appropriate server side validation for create / update / users
+12.	Write 5 good tests
 
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## Pull Request
+When finished, create a pull request into the main branch and invite use to review your code. Notify us back via Email to start the review process.
